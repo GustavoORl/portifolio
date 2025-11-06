@@ -1,14 +1,15 @@
 import React from "react";
-import Logo from "../assets/logo.png"
+import Logo from "../assets/Logo.jsx"
 
 function Header(){
 
     return(
-        <header className="bg-white pt-[15px] pb-[15px] z-99 shadow-sm">
+        <header className="relative h-[72px]">
+            <div className="bg-white w-screen pt-[15px] pb-[15px] z-99 shadow-sm fixed">
             <nav className="flex justify-center items-center">
-                <span><img src={Logo} width={150}></img></span>
+                <span><Logo></Logo></span>
             </nav>
-            
+            </div>
         </header>
     )
 

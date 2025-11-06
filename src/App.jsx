@@ -3,7 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
-import ServiceSection from './components/ServiceSection'
+import WorkSection from './components/WorkSection'
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
       <Header></Header>
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
-      <ServiceSection></ServiceSection>
+      <WorkSection></WorkSection>
     </div>
   )
 }
