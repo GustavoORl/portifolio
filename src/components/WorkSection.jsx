@@ -12,7 +12,7 @@ function WorkSection() {
                     <h6 className="bg-[#4353ff33] text-[#6624EB] px-3 py-1 rounded-2xl">Como Funciona?</h6>
                     <h1 className="text-3xl font-semibold text-center"><span className="block">Começamos com 3</span> passos fáceis</h1>
 
-                    <div className="w-sm h-[45vh] flex justify-center mt-7">
+                    <div className="w-sm h-[40vh] flex justify-center mt-7">
                         <div className="w-[90%] flex flex-col justify-center items-center gap-5">
                             <div className="bg-[#6624EB] p-7 rounded-full flex justify-center items-center">
                                 <Lampada></Lampada>
@@ -22,7 +22,7 @@ function WorkSection() {
                         </div>
                     </div>
 
-                    <div className="w-sm h-[45vh] flex justify-center">
+                    <div className="w-sm h-[40vh] flex justify-center">
                         <div className="w-[90%] flex flex-col justify-center items-center gap-5">
                             <div className="bg-[#6624EB] p-7 rounded-full flex justify-center items-center">
                                 <Pincel></Pincel>
@@ -32,7 +32,7 @@ function WorkSection() {
                         </div>
                     </div>
 
-                    <div className="w-sm h-[45vh] flex justify-center">
+                    <div className="w-sm h-[40vh] flex justify-center">
                         <div className="w-[90%] flex flex-col justify-center items-center gap-5">
                             <div className="bg-[#6624EB] p-7 rounded-full flex justify-center items-center">
                                 <Desenvolvedor></Desenvolvedor>
