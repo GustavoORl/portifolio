@@ -8,7 +8,7 @@ function WorkSection() {
     return (
         <section className="flex justify-center h-screen bg-white mt-7">
             <div className="w-sm">
-                <div className="flex flex-col items-center gap-7">
+                <div className="flex flex-col items-center gap-5">
                     <h6 className="bg-[#4353ff33] text-[#6624EB] px-3 py-1 rounded-2xl">Como Funciona?</h6>
                     <h1 className="text-3xl font-semibold text-center"><span className="block">Começamos com 3</span> passos fáceis</h1>
 
