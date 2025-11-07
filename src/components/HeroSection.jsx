@@ -7,7 +7,7 @@ function HeroSection() {
             <div className="h-full flex justify-center items-center w-sm">
                 <div className="flex flex-col gap-6">
                     <h1 className="text-5xl/14 text-start font-bold ">Crie experiências que encantam e convertem.</h1>
-                    <p className="text-[#767dac] text-lg">Desenvolvemos landing pages personalizadas que destacam o seu negócio e aumentam suas conversões, com design moderno e performance otimizada.</p>
+                    <p className="text-secundary text-lg">Desenvolvemos landing pages personalizadas que destacam o seu negócio e aumentam suas conversões, com design moderno e performance otimizada.</p>
                     <a href="#" className="bg-[#6624EB] text-white px-8 py-6 rounded-md mt-20 shadow-md font-semibold">Faça um orçamento</a>
                 </div>
             </div>

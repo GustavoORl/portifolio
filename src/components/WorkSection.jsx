@@ -18,7 +18,7 @@ function WorkSection() {
                                 <Lampada></Lampada>
                             </div>
                             <h3 className="font-bold text-2xl">Análise do produto</h3>
-                            <p className="text-center text-lg text-[#767dac]">Analisamos sua ideia e entendemos como transformá-la em um produto digital atrativo e funcional.</p>
+                            <p className="text-center text-lg text-secundary">Analisamos sua ideia e entendemos como transformá-la em um produto digital atrativo e funcional.</p>
                         </div>
                     </div>
 
@@ -28,7 +28,7 @@ function WorkSection() {
                                 <Pincel></Pincel>
                             </div>
                             <h3 className="font-bold text-2xl">Desing do produto</h3>
-                            <p className="text-center text-lg text-[#767dac]">Criamos um layout visual envolvente, focado em transmitir sua mensagem e gerar conversões.</p>
+                            <p className="text-center text-lg text-secundary">Criamos um layout visual envolvente, focado em transmitir sua mensagem e gerar conversões.</p>
                         </div>
                     </div>
 
@@ -38,7 +38,7 @@ function WorkSection() {
                                 <Desenvolvedor></Desenvolvedor>
                             </div>
                             <h3 className="font-bold text-2xl">Desenvolvimento do produto</h3>
-                            <p className="text-center text-lg text-[#767dac] ">Transformamos o design em uma landing page rápida, responsiva e otimizada para resultados e conversão de leads.</p>
+                            <p className="text-center text-lg text-secundary ">Transformamos o design em uma landing page rápida, responsiva e otimizada para resultados e conversão de leads.</p>
                         </div>
                     </div>
                 </div>

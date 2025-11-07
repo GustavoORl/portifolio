@@ -8,3 +8,11 @@
   box-sizing: border-box;
   font-family: "Nunito sans", sans-serif;
 }
+
+@utility text-primary{
+  font-size: var(--text-xl);
+}
+
+@utility text-secundary{
+  color: #767dac;
+}
