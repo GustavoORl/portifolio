@@ -6,7 +6,7 @@ import Desenvolvedor from "../assets/Desenvolvedor.jsx"
 function WorkSection() {
 
     return (
-        <section className="flex justify-center h-screen bg-white mt-7">
+        <section className="flex justify-center bg-white pt-[100px]">
             <div className="w-sm">
                 <div className="flex flex-col items-center gap-5">
                     <h6 className="bg-[#4353ff33] text-[#6624EB] px-3 py-1 rounded-2xl">Como Funciona?</h6>
@@ -17,8 +17,8 @@ function WorkSection() {
                             <div className="bg-[#6624EB] p-7 rounded-full flex justify-center items-center">
                                 <Lampada></Lampada>
                             </div>
-                            <h3 className="font-bold text-xl">Análise do produto</h3>
-                            <p className="text-center text-[#767dac]">Analisamos sua ideia e entendemos como transformá-la em um produto digital atrativo e funcional.</p>
+                            <h3 className="font-bold text-2xl">Análise do produto</h3>
+                            <p className="text-center text-lg text-[#767dac]">Analisamos sua ideia e entendemos como transformá-la em um produto digital atrativo e funcional.</p>
                         </div>
                     </div>
 
@@ -27,8 +27,8 @@ function WorkSection() {
                             <div className="bg-[#6624EB] p-7 rounded-full flex justify-center items-center">
                                 <Pincel></Pincel>
                             </div>
-                            <h3 className="font-bold text-xl">Desing do produto</h3>
-                            <p className="text-center text-[#767dac]">Criamos um layout visual envolvente, focado em transmitir sua mensagem e gerar conversões.</p>
+                            <h3 className="font-bold text-2xl">Desing do produto</h3>
+                            <p className="text-center text-lg text-[#767dac]">Criamos um layout visual envolvente, focado em transmitir sua mensagem e gerar conversões.</p>
                         </div>
                     </div>
 
@@ -37,8 +37,8 @@ function WorkSection() {
                             <div className="bg-[#6624EB] p-7 rounded-full flex justify-center items-center">
                                 <Desenvolvedor></Desenvolvedor>
                             </div>
-                            <h3 className="font-bold text-xl">Desenvolvimento do produto</h3>
-                            <p className="text-center text-[#767dac] ">Transformamos o design em uma landing page rápida, responsiva e otimizada para resultados e conversão de leads.</p>
+                            <h3 className="font-bold text-2xl">Desenvolvimento do produto</h3>
+                            <p className="text-center text-lg text-[#767dac] ">Transformamos o design em uma landing page rápida, responsiva e otimizada para resultados e conversão de leads.</p>
                         </div>
                     </div>
                 </div>
