@@ -8,7 +8,7 @@ function PriceSection() {
                 <div className="flex flex-col items-center gap-5">
                     <h6 className="bg-[#4353ff33] text-[#6624EB] px-3 py-1 rounded-2xl">Preços</h6>
 
-                    <div className="flex justify-center items-center bg-white w-full">
+                    <div className="flex justify-center items-center bg-white w-full shadow-sm">
                         <div className="flex flex-col gap-5 p-10">
                             <h3 className="text-2xl text-black">Plano Básico</h3>
                             <p className="text-secundary">Presença online rápida e profissional.<span className="block text-xl">A partir de</span></p>
@@ -23,7 +23,7 @@ function PriceSection() {
                         </div>
                     </div>
 
-                    <div className="flex justify-center items-center bg-white w-full border-1 border-[#6624EB] relative">
+                    <div className="flex justify-center items-center bg-white w-full border-1 border-[#6624EB] relative shadow-sm">
                         <div className="flex flex-col gap-5 p-10">
                             <h3 className="text-2xl text-black">Plano Profissional</h3>
                             <h3 className="absolute right-0 px-4 py-2 text-white rounded-l-full bg-[#6624EB]">Popular</h3>
@@ -40,7 +40,7 @@ function PriceSection() {
                         </div>
                     </div>
 
-                    <div className="flex justify-center items-center bg-white w-full">
+                    <div className="flex justify-center items-center bg-white w-full shadow-sm">
                         <div className="flex flex-col gap-5 p-10">
                             <h3 className="text-2xl text-black">Plano E-commerce</h3>
                             <p className="text-secundary">Presença online rápida e profissional. <span className="block text-xl">A partir de</span></p>
@@ -57,7 +57,6 @@ function PriceSection() {
 
                 </div>
             </div>
-
 
 
         </section>

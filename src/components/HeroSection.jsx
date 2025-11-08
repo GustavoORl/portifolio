@@ -3,7 +3,7 @@ import React from "react";
 function HeroSection() {
 
     return (
-        <section className="flex justify-center bg-[#fafafa] h-[90vh] ">
+        <section className="flex justify-center h-[90vh] ">
             <div className="h-full flex justify-center items-center w-sm">
                 <div className="flex flex-col gap-6">
                     <h1 className="text-5xl/14 text-start font-bold ">Crie experiências que encantam e convertem.</h1>

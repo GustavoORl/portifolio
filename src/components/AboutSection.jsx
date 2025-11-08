@@ -3,7 +3,7 @@ import React from "react";
 function AboutSection(){
 
     return(
-        <section className=" h-[70vh] bg-[#fafafa] flex justify-center items-center">
+        <section className=" h-[70vh] flex justify-center items-center">
             <div className="flex flex-col w-sm gap-4">
                 <h1 className="text-3xl text-center font-semibold"><span className="block">Desenvolvimento</span>da sua ideia na web</h1>
             <div className="flex flex-col gap-5 text-center text-lg text-secundary">
