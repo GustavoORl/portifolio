@@ -19,8 +19,11 @@ function SectionContact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        alert("Mensagem enviada e e-mail cadastrado com sucesso!");
+        setFormData({ name: "", lastname: "", email: "", comments: "" });
+
         // 1️⃣ Enviar para FormSubmit (email)
-        await fetch("https://formsubmit.co/YOUR_HASHED_EMAIL", {
+        await fetch("https://formsubmit.co/d5c5abcbf0c8500556703c8d37b44349", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -45,9 +48,6 @@ function SectionContact() {
                 mode: "no-cors", // importante para evitar bloqueio CORS
             }
         );
-
-        alert("Mensagem enviada e e-mail cadastrado com sucesso!");
-        setFormData({ name: "", lastname: "", email: "", comments: "" });
 
     };
 
