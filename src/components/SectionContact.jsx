@@ -1,8 +1,56 @@
 import React from "react";
 import LogoWhatsapp from "../assets/LogoWhatsapp";
 import LogoEmail from "../assets/LogoEmail";
+import { useState } from "react";
 
 function SectionContact() {
+
+    const [formData, setFormData] = useState({
+        name: "",
+        lastname: "",
+        email: "",
+        comments: "",
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // 1️⃣ Enviar para FormSubmit (email)
+        await fetch("https://formsubmit.co/YOUR_HASHED_EMAIL", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                _subject: "Nova mensagem do site DreamSite",
+                _captcha: "false",
+                _autoresponse: "Olá! Recebemos sua mensagem e responderemos em breve. — DreamSite",
+                ...formData,
+            }),
+        });
+
+        // 2️⃣ Enviar para Mailchimp (inscrição na lista)
+        const mailchimpData = new FormData();
+        mailchimpData.append("FNAME", formData.name);
+        mailchimpData.append("LNAME", formData.lastname);
+        mailchimpData.append("EMAIL", formData.email);
+
+        await fetch(
+            "https://app.us9.list-manage.com/subscribe/post?u=3ac9e0599d19e238d2bd24523&id=90442c13fc&f_id=00b601e1f0",
+            {
+                method: "POST",
+                body: mailchimpData,
+                mode: "no-cors", // importante para evitar bloqueio CORS
+            }
+        );
+
+        alert("Mensagem enviada e e-mail cadastrado com sucesso!");
+        setFormData({ name: "", lastname: "", email: "", comments: "" });
+
+    };
+
 
     return (
         <section className="h-screen flex justify-center pt-[100px] bg-[#Fafafa]">
@@ -13,11 +61,9 @@ function SectionContact() {
                     <h5 className="text-2xl font-semibold text-gray-800 mb-6">Envie Uma mensagem</h5>
 
                     <form
-                        method="post"
-                        onSubmit={(e) => e.preventDefault()}
-                        className="space-y-6"
+                        onSubmit={handleSubmit}
+                        className="space-y-6 w-full"
                     >
-                        
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="flex flex-col">
                                 <label htmlFor="name" className="text-sm font-medium text-gray-700 mb-1">
@@ -26,7 +72,10 @@ function SectionContact() {
                                 <input
                                     id="name"
                                     name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     type="text"
+                                    required
                                     className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none"
                                 />
                             </div>
@@ -38,13 +87,15 @@ function SectionContact() {
                                 <input
                                     id="lastname"
                                     name="lastname"
+                                    value={formData.lastname}
+                                    onChange={handleChange}
                                     type="text"
+                                    required
                                     className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none"
                                 />
                             </div>
                         </div>
 
-                        
                         <div className="flex flex-col">
                             <label htmlFor="email" className="text-sm font-medium text-gray-700 mb-1">
                                 Endereço de Email
@@ -52,12 +103,14 @@ function SectionContact() {
                             <input
                                 id="email"
                                 name="email"
+                                value={formData.email}
+                                onChange={handleChange}
                                 type="email"
+                                required
                                 className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none"
                             />
                         </div>
 
-                        
                         <div className="flex flex-col">
                             <label htmlFor="comments" className="text-sm font-medium text-gray-700 mb-1">
                                 Sua Mensagem
@@ -65,12 +118,14 @@ function SectionContact() {
                             <textarea
                                 id="comments"
                                 name="comments"
+                                value={formData.comments}
+                                onChange={handleChange}
                                 rows="5"
+                                required
                                 className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none resize-none"
                             ></textarea>
                         </div>
 
-                        {/* BOTÃO */}
                         <div className="flex justify-end">
                             <button
                                 type="submit"
