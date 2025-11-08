@@ -1,6 +1,18 @@
 import React from "react";
+import { sendEvent } from "../utils/analytics";
 
 function PriceSection() {
+
+    const handleClick = () => {
+        sendEvent("whatsapp_click", {
+            category: "Contato",
+            label: "Preços - WhatsApp",
+            location: "Price Section",
+        });
+        window.open("https://wa.me/5512991793561?text=Ol%C3%A1!%20Tenho%20interesse%20em%20fazer%20um%20or%C3%A7amento%20para%20criar%20um%20site.%20Poderia%20me%20ajudar%3F", "_blank");
+    };
+
+
 
     return (
         <section className="flex justify-center pt-[100px] bg-[#fafafa] pb-10">
@@ -19,7 +31,7 @@ function PriceSection() {
                             <h3>Responsivo com todos os dispositivos</h3>
                             <h3>Seo Básico</h3>
                             <h3>Integração com chat do Whatsapp</h3>
-                            <a href="#" className="bg-[#6624EB] text-white px-6 py-4 rounded-md shadow-md font-semibold">Fale conosco</a>
+                            <button onClick={handleClick} className="bg-[#6624EB] text-white px-6 py-4 rounded-md shadow-md font-semibold">Fale conosco</button>
                         </div>
                     </div>
 
@@ -36,7 +48,7 @@ function PriceSection() {
                             <h3>Seo Otimizado</h3>
                             <h3>Integração com chat do Whatsapp</h3>
                             <h3>Integração com Meta Pixel, MailChimp e Google Analytics</h3>
-                            <a href="#" className="bg-[#6624EB] text-white px-6 py-4 rounded-md shadow-md font-semibold">Fale conosco</a>
+                            <button onClick={handleClick} className="bg-[#6624EB] text-white px-6 py-4 rounded-md shadow-md font-semibold">Fale conosco</button>
                         </div>
                     </div>
 
@@ -51,7 +63,7 @@ function PriceSection() {
                             <h3>Responsivo com todos os dispositivos</h3>
                             <h3>Seo Otimizado</h3>
                             <h3>Todas as funcionalidades de E-commerce (carrinho, compra on-line, login, etc.)</h3>
-                            <a href="#" className="bg-[#6624EB] text-white px-6 py-4 rounded-md shadow-md font-semibold">Fale conosco</a>
+                            <button onClick={handleClick} className="bg-[#6624EB] text-white px-6 py-4 rounded-md shadow-md font-semibold">Fale conosco</button>
                         </div>
                     </div>
 

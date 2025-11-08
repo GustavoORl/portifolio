@@ -2,6 +2,7 @@ import React from "react";
 import LogoWhatsapp from "../assets/LogoWhatsapp";
 import LogoEmail from "../assets/LogoEmail";
 import { useState } from "react";
+import { sendEvent } from "../utils/analytics";
 
 function SectionContact() {
 
@@ -19,9 +20,17 @@ function SectionContact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        sendEvent("email_form_submit", {
+            category: "Contato",
+            label: "Formulário de Email",
+            method: "Mailchimp/FormSubmit",
+        });
+
+
         alert("Mensagem enviada e e-mail cadastrado com sucesso!");
         setFormData({ name: "", lastname: "", email: "", comments: "" });
 
+    try{
         // 1️⃣ Enviar para FormSubmit (email)
         await fetch("https://formsubmit.co/d5c5abcbf0c8500556703c8d37b44349", {
             method: "POST",
@@ -48,6 +57,10 @@ function SectionContact() {
                 mode: "no-cors", // importante para evitar bloqueio CORS
             }
         );
+    } catch (error) {
+        console.log("Erro ao enviar formulário:", error);
+        alert("Ocorreu um erro ao enviar. Tente novamente mais tarde!")
+    }
 
     };
 
