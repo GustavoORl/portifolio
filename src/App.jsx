@@ -22,7 +22,9 @@ function App() {
       <ServicesSection></ServicesSection>
       <PriceSection></PriceSection>
       <FeedbackSection></FeedbackSection>
+      <div className="lg:hidden">
       <SectionContact></SectionContact>
+      </div>
       <Footer></Footer>
       
     </div>

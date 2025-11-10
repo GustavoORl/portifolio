@@ -30,7 +30,7 @@ function SectionContact() {
         alert("Mensagem enviada e e-mail cadastrado com sucesso!");
         setFormData({ name: "", lastname: "", email: "", comments: "" });
 
-    try{
+    try {
         // 1️⃣ Enviar para FormSubmit (email)
         await fetch("https://formsubmit.co/d5c5abcbf0c8500556703c8d37b44349", {
             method: "POST",
@@ -66,20 +66,20 @@ function SectionContact() {
 
 
     return (
-        <section className="h-screen flex justify-center pt-[100px] bg-[#Fafafa]">
-            <div className="w-sm flex flex-col items-center gap-5">
-                <h6 className="bg-[#4353ff33] text-[#6624EB] px-3 py-1 rounded-2xl">Tem uma ideia?</h6>
+        <section className="h-screen flex justify-center pt-[100px] bg-[#Fafafa] lg:pt-0 lg:bg-white px-4">
+            <div className="w-lg max-w-[1200px] flex flex-col items-center gap-5 lg:w-sm 2xl:w-md">
+                <h6 className="bg-[#4353ff33] text-[#6624EB] px-3 py-1 rounded-2xl lg:hidden">Tem uma ideia?</h6>
 
-                <div className="w-full max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-2xl">
-                    <h5 className="text-2xl font-semibold text-gray-800 mb-6">Envie Uma mensagem</h5>
+                <div className="w-full max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-2xl xl:p-8">
+                    <h5 className="text-2xl font-semibold text-gray-800 mb-6 lg:text-3xl lg:font-bold xl:text-center">Envie Uma mensagem</h5>
 
                     <form
                         onSubmit={handleSubmit}
-                        className="space-y-6 w-full"
+                        className="space-y-6 w-full lg:space-y-3 2xl:space-y-6"
                     >
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 gap-6 lg:gap-2">
                             <div className="flex flex-col">
-                                <label htmlFor="name" className="text-sm font-medium text-gray-700 mb-1">
+                                <label htmlFor="name" className="text-sm font-medium text-gray-700 mb-1 xl:text-base 2xl:text-lg">
                                     Nome
                                 </label>
                                 <input
@@ -89,12 +89,12 @@ function SectionContact() {
                                     onChange={handleChange}
                                     type="text"
                                     required
-                                    className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none"
+                                    className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none lg:border-b lg:border-x-0 lg:border-t-0 lg:rounded-none lg:focus:ring-0 lg:focus:border-b-[#6624EB]"
                                 />
                             </div>
 
                             <div className="flex flex-col">
-                                <label htmlFor="lastname" className="text-sm font-medium text-gray-700 mb-1">
+                                <label htmlFor="lastname" className="text-sm font-medium text-gray-700 mb-1 xl:text-base 2xl:text-lg">
                                     Sobrenome
                                 </label>
                                 <input
@@ -104,13 +104,13 @@ function SectionContact() {
                                     onChange={handleChange}
                                     type="text"
                                     required
-                                    className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none"
+                                    className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none lg:border-b lg:border-x-0 lg:border-t-0 lg:rounded-none lg:focus:ring-0 lg:focus:border-b-[#6624EB]"
                                 />
                             </div>
                         </div>
 
                         <div className="flex flex-col">
-                            <label htmlFor="email" className="text-sm font-medium text-gray-700 mb-1">
+                            <label htmlFor="email" className="text-sm font-medium text-gray-700 mb-1 xl:text-base 2xl:text-lg">
                                 Endereço de Email
                             </label>
                             <input
@@ -120,12 +120,12 @@ function SectionContact() {
                                 onChange={handleChange}
                                 type="email"
                                 required
-                                className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none"
+                                className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none lg:border-b lg:border-x-0 lg:border-t-0 lg:rounded-none lg:focus:ring-0 lg:focus:border-b-[#6624EB]"
                             />
                         </div>
 
                         <div className="flex flex-col">
-                            <label htmlFor="comments" className="text-sm font-medium text-gray-700 mb-1">
+                            <label htmlFor="comments" className="text-sm font-medium text-gray-700 mb-1 xl:text-base 2xl:text-lg">
                                 Sua Mensagem
                             </label>
                             <textarea
@@ -135,7 +135,7 @@ function SectionContact() {
                                 onChange={handleChange}
                                 rows="5"
                                 required
-                                className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none resize-none"
+                                className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#6624EB] focus:outline-none resize-none "
                             ></textarea>
                         </div>
 

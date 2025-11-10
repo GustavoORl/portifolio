@@ -44,24 +44,28 @@ function FeedbackSection() {
     })
 
     return (
-        <section className=" relative flex flex-col gap-5 pt-[100px] pb-[100px] items-center bg-[#fafafa]">
+        <section className=" relative flex flex-col gap-5 pt-[100px] pb-[100px] items-center justify-center bg-[#fafafa] px-4 lg:px-0">
             <h6 className="bg-[#4353ff33] text-[#6624EB] px-3 py-1 rounded-2xl">Feedback de clientes</h6>
-            <div {...handlers} className="h-[35vh] w-sm overflow-hidden flex flex-col gap-10 items-center justify-center bg-white shadow-sm rounded-2xl">
+        
+            <div {...handlers} className="h-[35vh] w-[90%] max-w-[1200px] overflow-hidden flex flex-col gap-10 items-center justify-center bg-white shadow-sm rounded-2xl sm:h-[50vh] sm:w-lg lg:w-4xl">
 
-                <div className="flex transition-transform duration-700 ease-in-out"
+                <div className="flex transition-transform duration-700 ease-in-out w-full"
                     style={{ transform: `translateX(-${current * 100}%)` }}>
 
                     {feedbacks.map((instancia) => (
                         <div key={instancia.id}
-                            className="flex flex-col flex-shrink-0 items-center justify-center text-center w-full gap-3">
-                            <p className="text-xl">"{instancia.comentario}"</p>
+                            className="flex flex-shrink-0 w-full justify-center items-center">
+                        <div className="flex flex-col items-center justify-center text-center gap-3 w-[90%] lg:w-[70%]">
+                            <p className="text-xl xl:text-2xl">"{instancia.comentario}"</p>
                             <hr className="w-30 border-1 border-[#6624EB]"></hr>
-                            <h3>"{instancia.nome}"</h3>
+                            <h3 className="xl:text-xl">"{instancia.nome}"</h3>
+                        </div>
                         </div>
                     ))}
                 </div>
 
             </div>
+        
         <div className="flex justify-center gap-2">
                     {feedbacks.map((_, index) => (
                         <button

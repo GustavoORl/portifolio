@@ -16,3 +16,10 @@
 @utility text-secundary{
   color: #767dac;
 }
+
+@theme default{
+
+  --breakpoint-sm-mob: 26.5625rem;
+
+}
+
