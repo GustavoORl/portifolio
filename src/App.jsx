@@ -14,7 +14,7 @@ function App() {
 
   return (
 
-    <div>
+    <div className='overflow-hidden'>
       <Header></Header>
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>

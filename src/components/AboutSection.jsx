@@ -2,6 +2,8 @@ import React from "react";
 
 function AboutSection(){
 
+    
+
     return(
         <section className=" h-[80vh] flex justify-center items-center px-4 lg:px-0">
             <div className="flex flex-col w-lg gap-4 max-w-[1200px] lg:w-2xl xl:w-3xl 2xl:w-3xl">
